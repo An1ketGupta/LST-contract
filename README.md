@@ -32,8 +32,10 @@ It implements a reserve-backed ERC20 token where users can stake value, earn int
 Each ANC token represents a share of the reserve.
 
 Formula:
-
+```sh
 tokenValue = (reserve * PRECISION) / totalSupply
+```
+
 
 
 As interest increases the reserve, the value of each token increases.
@@ -47,8 +49,10 @@ As interest increases the reserve, the value of each token increases.
 - Interest is calculated lazily (only when stake or unstake is called)
 
 Function responsible:
-
+```sh
 AddInterestToReserve()
+```
+
 
 
 This avoids unnecessary gas usage.
